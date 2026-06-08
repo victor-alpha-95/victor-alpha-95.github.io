@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal website + automated publishing system — Vatsalya Awasthi</title>
+<meta name="description" content="How this site was designed and shipped through an AI-native workflow, with auto-publishing and uptime monitoring built in." />
+<link rel="stylesheet" href="site.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232f54eb'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <span class="brand"><a href="index.html">Vatsalya Awasthi</a></span>
+  <nav><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="index.html#writing">Writing</a></nav>
+</div></header>
+<main class="wrap">
+  <a class="back" href="projects.html" style="display:inline-block;margin:34px 0 18px">&larr; All projects</a>
+  <article class="post">
+    <h1>Personal website + automated publishing system</h1>
+    <p class="meta">June 2026 · AI-native, Web, Automation</p>
+    <p class="lede">A one-stop professional home on the web — designed, built, and deployed through an AI-native workflow, with publishing and monitoring automated from day one.</p>
+
+    <h2>Context</h2>
+    <p>I wanted a single, fast, minimalist destination that introduces me professionally and links my social profiles — and that could grow over time without manual upkeep. The goal was less &ldquo;a website&rdquo; and more &ldquo;a system&rdquo;: something that keeps itself current.</p>
+
+    <h2>What I did</h2>
+    <ul>
+      <li>Benchmarked best-in-class minimalist personal sites and locked a monochrome, content-first design with dark mode and strong performance/accessibility baselines.</li>
+      <li>Shipped a static site on free, durable hosting with automatic HTTPS — chosen so publishing is a simple, version-controlled push.</li>
+      <li>Built an auto-publish flow: when a project wraps, a concise summary can be drafted to an approved template and published here with one approval.</li>
+      <li>Set up daily uptime monitoring with diagnosed causes and an independent always-on external monitor.</li>
+    </ul>
+
+    <h2>Outcome</h2>
+    <ul>
+      <li>A live, mobile-first site that loads fast and links cleanly to LinkedIn and X.</li>
+      <li>A repeatable pipeline so new projects and articles publish themselves with minimal effort.</li>
+    </ul>
+  </article>
+</main>
+<footer><div class="wrap">&copy; <span id="yr"></span> Vatsalya Awasthi</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
