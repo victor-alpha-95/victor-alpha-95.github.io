@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vatsalya Awasthi — Writing</title>
+    <link>https://victor-alpha-95.github.io/writing.html</link>
+    <atom:link href="https://victor-alpha-95.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Notes on strategy, new business, and operating in an AI-native way.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Jun 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>I Set Out to Build a Website. I Built a System Instead.</title>
+      <link>https://victor-alpha-95.github.io/article-built-a-system-not-a-website.html</link>
+      <guid>https://victor-alpha-95.github.io/article-built-a-system-not-a-website.html</guid>
+      <pubDate>Tue, 09 Jun 2026 09:00:00 +0000</pubDate>
+      <description>A website is a noun; what I needed was a verb. Build notes on a site that runs itself, and what it taught me about delegation.</description>
+    </item>
+    <item>
+      <title>Plateaus Are the Point</title>
+      <link>https://victor-alpha-95.github.io/article-plateaus-are-the-point.html</link>
+      <guid>https://victor-alpha-95.github.io/article-plateaus-are-the-point.html</guid>
+      <pubDate>Mon, 08 Jun 2026 09:00:00 +0000</pubDate>
+      <description>A spacecraft, six years on — why the plateau isn't a pause in your progress. It is the progress.</description>
+    </item>
+  </channel>
+</rss>
