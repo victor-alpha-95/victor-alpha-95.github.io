@@ -23,7 +23,7 @@ A staged, validation-first approach, each stage approved before the next:
 - **Design: modern monochrome + one accent.** Reads as credible and current, ages well, loads fastest, and puts the words first. Dark/light auto via `prefers-color-scheme`.
 - **Discretion over specifics.** The public site summarizes impact without confidential numbers, deal sizes, or counterparties.
 
-## 4. The seven systems, in detail
+## 4. The eight systems, in detail
 1. **Website** — semantic HTML, design-token CSS, accessibility + performance baselines, SEO/OG/Twitter meta, JSON-LD `Person` schema, sitemap, robots.
 2. **Project auto-publish** — end-of-project prompt → fixed summary template → approval → `project-<slug>.html` + cards on Projects/Home + sitemap → deploy.
 3. **Uptime monitoring** — daily diagnostic check (cause taxonomy + fix) backed by an always-on external monitor for 24/7 coverage.
@@ -31,6 +31,11 @@ A staged, validation-first approach, each stage approved before the next:
 5. **Content engine** — weekly: pick best idea (themes map + recent activity + projects) → draft in voice → self-check → propose → publish only on approval.
 6. **Human-voice standard** — qualitative banned vocabulary/structures + quantitative targets (burstiness ≥8, em-dash budget, specificity, stance), enforced by a measurement script.
 7. **Distribution engine** — one approved piece → website article + LinkedIn post + X thread, each platform-native; posting is per-platform, approval-gated.
+8. **Discoverability & audience** — cookieless Cloudflare Web Analytics on every page; `Person` + `BlogPosting` JSON-LD, Open Graph, sitemap and robots for search + AI answer-engines; an RSS feed (`/feed.xml`) with autodiscovery; and two owned-audience capture points — an email subscribe form and a public WhatsApp Channel.
+
+The end-to-end loop, and the points where it removes manual effort, is captured in `value-flow.svg` (and `value-flow.png`):
+
+![How the system creates value and where it saves effort](value-flow.png)
 
 ## 5. Design invariants (don't drift)
 - Monochrome + single accent; serif headings (Iowan/Palatino/Georgia), sans body.
