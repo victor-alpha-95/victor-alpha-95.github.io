@@ -62,6 +62,8 @@
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:30;background:var(--accent);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;font-size:14px;font-weight:600}
+  .skip-link:focus{left:0}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
 
   /* Header */
@@ -124,9 +126,21 @@
   footer .socials{margin-bottom:14px}
   .skills{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
   .skills .tag{color:var(--muted)}
+
+  /* subscribe */
+  .subscribe-block{border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;background:var(--surface)}
+  .subscribe-block h3{margin:0 0 4px;font-size:18px;font-weight:650;letter-spacing:-0.01em}
+  .subscribe-block .sub-note{margin:0 0 14px;color:var(--muted);font-size:14.5px}
+  .subscribe{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .subscribe input[type=email]{flex:1;min-width:220px;padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:15px;font-family:inherit}
+  .subscribe input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+  .subscribe button{padding:11px 20px;border:none;border-radius:999px;background:var(--accent);color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:opacity .15s}
+  .subscribe button:hover{opacity:.9}
+  .subscribe-alt{margin:12px 0 0;font-size:13.5px;color:var(--muted)}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site">
   <div class="wrap nav">
@@ -140,7 +154,7 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
 
   <section class="hero" style="border-top:0">
     <p class="eyebrow">Strategy · New Business · Transformation</p>
@@ -280,7 +294,7 @@
     <div class="sec-h"><h2>Stay in touch</h2></div>
     <div class="subscribe-block">
       <h3>Get new pieces by email</h3>
-      <p class="sub-note">Occasional notes on strategy, new business, and operating in an AI-native way. No spam, unsubscribe anytime.</p>
+      <p class="sub-note">Occasional notes on strategy, new business, and operating in an AI-native way. No spam &mdash; opt out anytime by replying to any email.</p>
       <form class="subscribe" action="https://formsubmit.co/vatsalya.mdig@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New website subscriber" />
         <input type="hidden" name="_captcha" value="false" />
