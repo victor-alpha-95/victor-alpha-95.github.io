@@ -27,15 +27,21 @@ A staged, validation-first approach, each stage approved before the next:
 1. **Website** — semantic HTML, design-token CSS, accessibility + performance baselines, SEO/OG/Twitter meta, JSON-LD `Person` schema, sitemap, robots.
 2. **Project auto-publish** — end-of-project prompt → fixed summary template → approval → `project-<slug>.html` + cards on Projects/Home + sitemap → deploy.
 3. **Uptime monitoring** — daily diagnostic check (cause taxonomy + fix) backed by an always-on external monitor for 24/7 coverage.
-4. **Psychographic engine** — comprehensive harvest of the owner's social activity, classified into curiosity clusters with most-amplified voices; refreshed monthly; private output.
-5. **Content engine** — weekly: pick best idea (themes map + recent activity + projects) → draft in voice → self-check → propose → publish only on approval.
-6. **Human-voice standard** — qualitative banned vocabulary/structures + quantitative targets (burstiness ≥8, em-dash budget, specificity, stance), enforced by a measurement script.
-7. **Distribution engine** — one approved piece → website article + LinkedIn post + X thread, each platform-native; posting is per-platform, approval-gated.
+4. **Psychographic engine** — monthly harvest of the owner's social attention (posts, reposts, likes, bookmarks/saved — private items summarized into theme tallies only, never reproduced), classified into seven theme clusters, *each carrying an editorial thesis* (a held belief, what it argues against, and the lived experience that makes it credible). New themes detected outside the clusters are flagged for the owner's approval, never silently added. Private output.
+5. **Content engine** — a *scored idea bank*: every idea rated on audience resonance, attention heat, differentiation ("could anyone else write this?"), timeliness, and ease; re-ranked monthly; replenished with freshly minted ideas plus at most one bounded "exploratory" adjacent-theme suggestion; a monthly triage puts the unreviewed tail in front of the owner (promote / park / kill — nothing rots, and nothing dies without his word). Weekly: top-ranked idea → draft in voice → binding quality gate → propose → publish only on approval.
+6. **Human-voice standard** — qualitative banned vocabulary/structures + quantitative targets (burstiness ≥8, em-dash budget, specificity, stance), enforced by a measurement script. **Binding:** a draft ships only fully clean or with each flag explicitly waived in writing.
+7. **Distribution engine** — one approved piece → website article (always first) + LinkedIn native + X long-form, each platform-native. Posting is *slotted and ask-first*: scheduled slots (Tue/Thu evening) ping the owner with the exact ready copy and post only on his explicit yes at that moment — content approval and posting approval are separate gates, both required, every time.
 8. **Discoverability & audience** — cookieless Cloudflare Web Analytics on every page; `Person` + `BlogPosting` JSON-LD, Open Graph, sitemap and robots for search + AI answer-engines; an RSS feed (`/feed.xml`) with autodiscovery; and two owned-audience capture points — an email subscribe form and a public WhatsApp Channel.
 
-The end-to-end loop, and the points where it removes manual effort, is captured in `value-flow.svg` (and `value-flow.png`):
+### 4b. The closed loop (v2, June 2026)
+What turned a pipeline into a system: the parts now feed each other on a fixed rhythm.
+- **Monthly (1st):** a metrics pass harvests audience signals (site, search, social, email) → the psychographic refresh combines them with the owner's fresh attention data → every cluster gets a verdict (heat up / hold / cool / divergence) → the idea bank is re-scored and re-sorted, new ideas are minted, and a triage digest collects the owner's verdicts on the tail. Divergences between what the owner loves and what the audience rewards surface as questions, never auto-resolved toward the audience — voice fidelity outranks engagement.
+- **Weekly (Mon):** the top-scored idea is drafted in the owner's voice, passes the binding voice gate, and is proposed. On approval it publishes (website → RSS → email → WhatsApp), and the distribution pack queues for the slots.
+- **Slotted (Tue/Thu):** each platform post goes out only on the owner's yes at the slot, followed by his reply window — because author-engaged replies, not posting volume, are what the platforms actually reward.
 
-![How the system creates value and where it saves effort](value-flow.png)
+The whole chain, with the three human moments starred, is captured in `value-flow.svg` (and `value-flow.png`):
+
+![Value chain: monthly intelligence (attention + audience signals → psychographic profile → scored idea bank with owner triage), weekly production (draft → binding voice gate → owner approval → publish), slotted ask-first distribution (LinkedIn Tue, X Thu — posting only on an explicit yes), and a dashed feedback line returning performance data to the monthly intelligence pass.](value-flow.png)
 
 ## 5. Design invariants (don't drift)
 - Monochrome + single accent; serif headings (Iowan/Palatino/Georgia), sans body.
@@ -52,7 +58,12 @@ Every automation is designed to do the heavy, repeatable middle on its own and *
 ## 8. What's deliberately private
 The psychographic profile and the internal engine specs live in a private workspace, not this public repo. The repo documents the architecture and the surface, not the owner's personal taste-map.
 
-## 9. Lessons
+## 9. Changelog
+- **v1 (8 Jun 2026):** site live; eight systems designed; first essays published.
+- **v2 (12 Jun 2026):** the closed loop. Full technical-SEO pass (canonical URLs + social cards on every page, branded 404, author-entity consistency); voice gate made binding; idea bank rebuilt as a scored pipeline with monthly triage; psychographic engine extended to bookmarks/saved behind a novelty gate; monthly metrics → recalibration → re-ranking loop wired end-to-end; slotted ask-first distribution (LinkedIn Tue / X Thu). Every change passed an independent adversarial review before shipping.
+
+## 10. Lessons
 - The best version of a "small, fixed" deliverable is often a process, not an object.
 - Delegation works when you hand over the outcome and keep the judgment.
 - Quality control for AI-assisted writing has to be *measurable*, not just felt — hence the voice-check script.
+- A pipeline becomes a system the day its output data starts choosing its next input — and it stays trustworthy only because three moments remain human: the triage, the approval, and the yes before each post.

@@ -1,125 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 780" role="img" aria-labelledby="vftitle vfdesc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-<title id="vftitle">How the system creates value and saves effort</title>
-<desc id="vfdesc">Inputs (a project, an idea, your voice) flow through six stages: pick the topic, draft in your voice, a quality gate, your approval (the one human step), publish and distribute, and run and grow. Five stages each save manual effort; the approval stage keeps your judgment. The output is a site that compounds, an audience you own, and time returned.</desc>
-<style>
-  .panel{fill:#ffffff;stroke:#e6e4dd}
-  .node{fill:#faf9f6;stroke:#e6e4dd}
-  .io{fill:#eef1ff;stroke:#2f54eb}
-  .human{fill:#2f54eb;stroke:#2f54eb}
-  .tag{fill:#eef1ff;stroke:#dfe4ff}
-  .ttl{fill:#15151a}
-  .sub{fill:#5c5c66}
-  .acc{fill:#2f54eb}
-  .tagtx{fill:#2f54eb}
-  .white{fill:#ffffff}
-  .whitesub{fill:#e3e9ff}
-  .flow{stroke:#b9c6f5}
-  .dash{stroke:#c9c9cf}
-  @media (prefers-color-scheme: dark){
-    .panel{fill:#16161a;stroke:#2a2a31}
-    .node{fill:#1e1e24;stroke:#33333a}
-    .io{fill:#20263f;stroke:#7e98ff}
-    .human{fill:#3a59d6;stroke:#7e98ff}
-    .tag{fill:#20263f;stroke:#34406b}
-    .ttl{fill:#ededf0}
-    .sub{fill:#9a9aa6}
-    .acc{fill:#7e98ff}
-    .tagtx{fill:#aebbff}
-    .whitesub{fill:#dfe6ff}
-    .flow{stroke:#3a59d6}
-    .dash{stroke:#3a3a42}
-  }
-  .t-ttl{font-size:15px;font-weight:650;letter-spacing:-0.01em}
-  .t-sub{font-size:11.5px}
-  .t-tag{font-size:11.5px;font-weight:600}
-  .t-h1{font-size:20px;font-weight:700;letter-spacing:-0.01em}
-  .t-band{font-size:13px;font-weight:600}
-  .t-lbl{font-size:11px;font-weight:700;letter-spacing:.06em}
-</style>
-<defs>
-  <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-    <path d="M0 0L10 5L0 10z" class="acc"/>
-  </marker>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" role="img" aria-labelledby="vfs-title vfs-desc">
+  <title id="vfs-title">Value chain of the self-publishing system (stacked)</title>
+  <desc id="vfs-desc">Three stacked bands. One, monthly intelligence: the owner's attention and audience signals feed a psychographic profile that re-ranks a scored idea bank, with a monthly owner triage. Two, weekly production: draft in the owner's voice, a binding voice gate, the owner's approval, then publish to website, RSS, email and WhatsApp. Three, slotted distribution: LinkedIn Tuesday and X Thursday slots post only on an explicit yes; the audience compounds. A dashed feedback line returns performance data to the top. Stars mark the three human moments.</desc>
+  <defs>
+    <marker id="sarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5c5c66"/>
+    </marker>
+    <marker id="sarrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f54eb"/>
+    </marker>
+  </defs>
 
-<rect x="1" y="1" width="958" height="778" rx="18" class="panel"/>
-<text x="480" y="42" text-anchor="middle" class="t-h1 ttl">How this system creates value &#8212; and where it saves you effort</text>
+  <rect width="760" height="1170" rx="14" fill="#faf9f6"/>
 
-<!-- legend -->
-<text x="480" y="64" text-anchor="middle" class="t-sub sub">tinted tags = effort saved &#160;&#160;·&#160;&#160; solid blue = your judgment, kept</text>
+  <!-- BAND 1 -->
+  <text x="30" y="42" font-size="14" font-weight="700" fill="#5c5c66" letter-spacing="2">1 · INTELLIGENCE — MONTHLY</text>
 
-<!-- INPUT -->
-<rect x="280" y="84" width="400" height="50" rx="12" class="io"/>
-<text x="480" y="105" text-anchor="middle" class="t-lbl acc">INPUTS</text>
-<text x="480" y="123" text-anchor="middle" class="t-sub sub">a finished project &#160;·&#160; an idea &#160;·&#160; your voice &amp; taste</text>
+  <rect x="30" y="58" width="330" height="76" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="195" y="84" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">My attention</text>
+  <text x="195" y="104" font-size="12.5" fill="#5c5c66" text-anchor="middle">X + LinkedIn: posts · reposts · likes ·</text>
+  <text x="195" y="120" font-size="12.5" fill="#5c5c66" text-anchor="middle">bookmarks &amp; saved (privacy-safe)</text>
 
-<!-- flow arrows (vertical, x=480) -->
-<g class="flow" stroke-width="2" fill="none" marker-end="url(#arr)">
-  <line x1="480" y1="134" x2="480" y2="172"/>
-  <line x1="480" y1="232" x2="480" y2="258"/>
-  <line x1="480" y1="318" x2="480" y2="344"/>
-  <line x1="480" y1="404" x2="480" y2="430"/>
-  <line x1="480" y1="490" x2="480" y2="516"/>
-  <line x1="480" y1="576" x2="480" y2="602"/>
-  <line x1="480" y1="662" x2="480" y2="688"/>
-</g>
+  <rect x="400" y="58" width="330" height="76" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="565" y="84" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Audience signals</text>
+  <text x="565" y="104" font-size="12.5" fill="#5c5c66" text-anchor="middle">site analytics · search · social</text>
+  <text x="565" y="120" font-size="12.5" fill="#5c5c66" text-anchor="middle">engagement · email list</text>
 
-<!-- STAGE NODES (x 270..690, w420) -->
-<!-- 1 -->
-<rect x="270" y="174" width="420" height="56" rx="12" class="node"/>
-<text x="480" y="199" text-anchor="middle" class="t-ttl ttl">1 · Pick the topic</text>
-<text x="480" y="217" text-anchor="middle" class="t-sub sub">psychographic engine + idea bank</text>
-<!-- 2 -->
-<rect x="270" y="260" width="420" height="56" rx="12" class="node"/>
-<text x="480" y="285" text-anchor="middle" class="t-ttl ttl">2 · Draft in your voice</text>
-<text x="480" y="303" text-anchor="middle" class="t-sub sub">content engine, trained on your writing</text>
-<!-- 3 -->
-<rect x="270" y="346" width="420" height="56" rx="12" class="node"/>
-<text x="480" y="371" text-anchor="middle" class="t-ttl ttl">3 · Quality gate</text>
-<text x="480" y="389" text-anchor="middle" class="t-sub sub">anti-&#8220;AI-slop&#8221; voice check (measured)</text>
-<!-- 4 HUMAN -->
-<rect x="270" y="432" width="420" height="56" rx="12" class="human"/>
-<text x="480" y="457" text-anchor="middle" class="t-ttl white">4 · You approve</text>
-<text x="480" y="475" text-anchor="middle" class="t-sub whitesub">the one human step &#8212; nothing ships without it</text>
-<!-- 5 -->
-<rect x="270" y="518" width="420" height="56" rx="12" class="node"/>
-<text x="480" y="543" text-anchor="middle" class="t-ttl ttl">5 · Publish &amp; distribute</text>
-<text x="480" y="561" text-anchor="middle" class="t-sub sub">website &#183; LinkedIn &#183; X, each platform-native</text>
-<!-- 6 -->
-<rect x="270" y="604" width="420" height="56" rx="12" class="node"/>
-<text x="480" y="629" text-anchor="middle" class="t-ttl ttl">6 · Run &amp; grow</text>
-<text x="480" y="647" text-anchor="middle" class="t-sub sub">uptime &#183; analytics &#183; WhatsApp &#183; email &#183; RSS</text>
+  <line x1="195" y1="134" x2="330" y2="168" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
+  <line x1="565" y1="134" x2="430" y2="168" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
 
-<!-- effort-saved tags (right) -->
-<g>
-  <line x1="690" y1="202" x2="724" y2="202" class="dash" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <rect x="724" y="184" width="220" height="36" rx="10" class="tag"/>
-  <text x="738" y="207" class="t-tag tagtx">saves the blank page</text>
+  <rect x="30" y="172" width="700" height="78" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="380" y="200" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Psychographic profile</text>
+  <text x="380" y="220" font-size="12.5" fill="#5c5c66" text-anchor="middle">7 theme clusters, each with a thesis · recalibrated monthly:</text>
+  <text x="380" y="236" font-size="12.5" fill="#5c5c66" text-anchor="middle">heat up · hold · cool · divergence — new themes ★gated by me</text>
 
-  <line x1="690" y1="288" x2="724" y2="288" class="dash" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <rect x="724" y="270" width="220" height="36" rx="10" class="tag"/>
-  <text x="738" y="293" class="t-tag tagtx">saves hours of writing</text>
+  <line x1="380" y1="250" x2="380" y2="282" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
 
-  <line x1="690" y1="374" x2="724" y2="374" class="dash" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <rect x="724" y="356" width="220" height="36" rx="10" class="tag"/>
-  <text x="738" y="379" class="t-tag tagtx">saves manual editing</text>
+  <rect x="30" y="286" width="700" height="92" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="380" y="314" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Idea bank — scored backlog</text>
+  <text x="380" y="334" font-size="12.5" fill="#5c5c66" text-anchor="middle">every idea scored: resonance · heat · edge · timeliness · ease —</text>
+  <text x="380" y="350" font-size="12.5" fill="#5c5c66" text-anchor="middle">re-ranked monthly, replenished with new + exploratory ideas</text>
+  <text x="380" y="370" font-size="12.5" font-weight="650" fill="#2f54eb" text-anchor="middle">★ monthly triage: my verdicts on the unreviewed tail</text>
 
-  <line x1="690" y1="546" x2="724" y2="546" class="dash" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <rect x="724" y="528" width="220" height="36" rx="10" class="tag"/>
-  <text x="738" y="551" class="t-tag tagtx">saves manual posting</text>
+  <!-- BAND 2 -->
+  <text x="30" y="436" font-size="14" font-weight="700" fill="#5c5c66" letter-spacing="2">2 · PRODUCTION — WEEKLY</text>
+  <line x1="380" y1="378" x2="380" y2="448" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
 
-  <line x1="690" y1="632" x2="724" y2="632" class="dash" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <rect x="724" y="614" width="220" height="36" rx="10" class="tag"/>
-  <text x="738" y="637" class="t-tag tagtx">saves manual monitoring</text>
-</g>
+  <rect x="30" y="452" width="700" height="66" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="380" y="479" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Draft (Mon)</text>
+  <text x="380" y="499" font-size="12.5" fill="#5c5c66" text-anchor="middle">top-ranked idea, written in my voice, ~800 words</text>
 
-<!-- human marker (left of stage 4) -->
-<line x1="270" y1="460" x2="236" y2="460" class="dash" stroke-width="1.5" stroke-dasharray="3 3"/>
-<rect x="16" y="442" width="220" height="36" rx="10" class="tag"/>
-<text x="30" y="465" class="t-tag tagtx">your judgment, kept</text>
+  <line x1="380" y1="518" x2="380" y2="548" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
 
-<!-- VALUE band -->
-<rect x="180" y="690" width="600" height="58" rx="14" class="io"/>
-<text x="480" y="713" text-anchor="middle" class="t-lbl acc">VALUE, COMPOUNDING</text>
-<text x="480" y="733" text-anchor="middle" class="t-band ttl">a site that compounds &#160;·&#160; an audience you own &#160;·&#160; your time, returned</text>
+  <rect x="30" y="552" width="700" height="66" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="380" y="579" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Voice gate (binding)</text>
+  <text x="380" y="599" font-size="12.5" fill="#5c5c66" text-anchor="middle">12 measurable anti-AI-slop checks: pass, fix, or logged waiver</text>
+
+  <line x1="380" y1="618" x2="380" y2="648" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
+
+  <rect x="200" y="652" width="360" height="62" rx="10" fill="#2f54eb"/>
+  <text x="380" y="679" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">★ I APPROVE</text>
+  <text x="380" y="699" font-size="12.5" fill="#e3e9ff" text-anchor="middle">edit · approve · skip</text>
+
+  <line x1="380" y1="714" x2="380" y2="744" stroke="#2f54eb" stroke-width="2" marker-end="url(#sarrA)"/>
+
+  <rect x="30" y="748" width="700" height="66" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="380" y="775" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Publish</text>
+  <text x="380" y="795" font-size="12.5" fill="#5c5c66" text-anchor="middle">website (canonical) → RSS → email → WhatsApp ping</text>
+
+  <!-- BAND 3 -->
+  <text x="30" y="872" font-size="14" font-weight="700" fill="#5c5c66" letter-spacing="2">3 · DISTRIBUTION — SLOTTED, ASK-FIRST</text>
+  <line x1="195" y1="814" x2="195" y2="884" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
+  <line x1="565" y1="814" x2="565" y2="884" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
+
+  <rect x="30" y="888" width="330" height="84" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="195" y="914" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">LinkedIn slot — Tue 6 PM</text>
+  <text x="195" y="934" font-size="12.5" fill="#5c5c66" text-anchor="middle">pings me the ready copy</text>
+  <text x="195" y="954" font-size="12.5" font-weight="650" fill="#2f54eb" text-anchor="middle">★ posts only on my yes · link in comment</text>
+
+  <rect x="400" y="888" width="330" height="84" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="565" y="914" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">X slot — Thu 6 PM</text>
+  <text x="565" y="934" font-size="12.5" fill="#5c5c66" text-anchor="middle">pings me the ready long-form</text>
+  <text x="565" y="954" font-size="12.5" font-weight="650" fill="#2f54eb" text-anchor="middle">★ posts only on my yes · link in reply</text>
+
+  <line x1="195" y1="972" x2="330" y2="1006" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
+  <line x1="565" y1="972" x2="430" y2="1006" stroke="#5c5c66" stroke-width="1.8" marker-end="url(#sarr)"/>
+
+  <rect x="30" y="1010" width="700" height="66" rx="10" fill="#ffffff" stroke="#e6e4dd"/>
+  <text x="380" y="1037" font-size="15" font-weight="650" fill="#15151a" text-anchor="middle">Audience compounds</text>
+  <text x="380" y="1057" font-size="12.5" fill="#5c5c66" text-anchor="middle">readers → followers → subscribers · search &amp; AI engines cite the canon</text>
+
+  <!-- FEEDBACK -->
+  <path d="M730,1043 C752,1043 752,96 738,96 L734,96" fill="none" stroke="#2f54eb" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#sarrA)"/>
+  <text x="380" y="1100" font-size="12.5" font-weight="650" fill="#2f54eb" text-anchor="middle">the loop: performance flows back monthly → the profile recalibrates →</text>
+  <text x="380" y="1118" font-size="12.5" font-weight="650" fill="#2f54eb" text-anchor="middle">ideas re-rank → the next essay is better aimed</text>
+
+  <text x="380" y="1142" font-size="12" fill="#5c5c66" text-anchor="middle">Machines do every repeatable step.</text>
+  <text x="380" y="1160" font-size="12" font-weight="700" fill="#2f54eb" text-anchor="middle">★ = the human moments: triage · approval · the yes before each post.</text>
 </svg>
