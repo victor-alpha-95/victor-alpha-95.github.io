@@ -6,7 +6,14 @@
     <atom:link href="https://victor-alpha-95.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>Notes on strategy, new business, and operating in an AI-native way.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Jun 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Building With Everything</title>
+      <link>https://victor-alpha-95.github.io/article-zero-to-one-inside-a-giant.html</link>
+      <guid>https://victor-alpha-95.github.io/article-zero-to-one-inside-a-giant.html</guid>
+      <pubDate>Wed, 17 Jun 2026 09:00:00 +0000</pubDate>
+      <description>0→1 inside a giant: the resources are real, they're just not yours. Why the currency is belief, not budget.</description>
+    </item>
     <item>
       <title>I Set Out to Build a Website. I Built a System Instead.</title>
       <link>https://victor-alpha-95.github.io/article-built-a-system-not-a-website.html</link>
