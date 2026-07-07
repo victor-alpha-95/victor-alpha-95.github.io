@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Fable Method — Vatsalya Awasthi</title>
+<meta name="description" content="A portable working protocol that gives an AI agent a memory and a verification habit, so it improves across sessions instead of starting over. Open-source." />
+<link rel="canonical" href="https://victor-alpha-95.github.io/project-fable-method.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Fable Method — Vatsalya Awasthi" />
+<meta property="og:description" content="A portable working protocol that gives an AI agent a memory and a verification habit, so it improves across sessions instead of starting over." />
+<meta property="og:url" content="https://victor-alpha-95.github.io/project-fable-method.html" />
+<meta property="og:image" content="https://victor-alpha-95.github.io/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Fable Method — Vatsalya Awasthi" />
+<meta name="twitter:description" content="A portable working protocol that gives an AI agent a memory and a verification habit, so it improves across sessions instead of starting over." />
+<meta name="twitter:image" content="https://victor-alpha-95.github.io/og.png" />
+<link rel="stylesheet" href="site.css" />
+<link rel="alternate" type="application/rss+xml" title="Vatsalya Awasthi — Writing" href="feed.xml" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232f54eb'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site"><div class="wrap nav">
+  <span class="brand"><a href="index.html">Vatsalya Awasthi</a></span>
+  <nav><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="index.html#writing">Writing</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <a class="back" href="projects.html" style="display:inline-block;margin:34px 0 18px">&larr; All projects</a>
+  <article class="post">
+    <h1>The Fable Method</h1>
+    <p class="meta">July 2026 · AI-native, Agents, Systems, Open source</p>
+    <p class="lede">A portable working protocol that gives an AI agent a memory and a verification habit, so it improves across sessions instead of starting over.</p>
+
+    <h2>Context</h2>
+    <p>AI agents are capable but forgetful and overconfident. They repeat mistakes they already solved, and they announce success without checking. I wanted one reusable protocol that fixes both &mdash; a way of working I could drop into any tool and trust on real tasks, not a demo.</p>
+
+    <h2>What I did</h2>
+    <ul>
+      <li>Designed a single loop &mdash; recall past lessons, do the work with discipline, verify against evidence, record what was learned &mdash; running underneath four modes: fixing what&rsquo;s broken, building what&rsquo;s new, answering how-to questions, and answering factual ones.</li>
+      <li>Built a persistent, append-only memory so lessons compound: a global journal plus a per-project file the agent reads before it starts and writes after it finishes.</li>
+      <li>Made verification non-negotiable. No success claim ships without quoted evidence from the environment, and anything that can&rsquo;t be checked is labelled UNVERIFIED with the exact test to run.</li>
+      <li>Wrote in guardrails against the failure modes that actually sink agents: confident false success, fixating on the first hypothesis, big-bang builds tested only at the end, answering a false premise, and memory bloat.</li>
+      <li>Tuned it empirically rather than by taste &mdash; 14 graded runs over 5 rounds, each change driven by a failure I watched happen.</li>
+    </ul>
+
+    <figure class="diagram">
+      <img src="fable-loop.svg" alt="The Fable Method loop in four steps, left to right: Recall (read past lessons), Work (with discipline, across four modes: solve, build, guide, answer), Verify (against evidence, or say UNVERIFIED), and Record (append the lesson). A dashed arrow loops back from Record to Recall, labelled: lessons compound across sessions, via an append-only journal the agent reads before it starts and writes when it finishes." />
+      <figcaption>One loop, four modes. The agent recalls before it works and records after &mdash; so the same mistake stops happening twice.</figcaption>
+    </figure>
+
+    <h2>Outcome</h2>
+    <ul>
+      <li>On a held-out benchmark, a small model went from 0 of 6 tasks to 5 of 6 with the protocol; a stronger model passed every case.</li>
+      <li>Found the honest ceiling. The last failures were a model-capability limit, not a protocol gap, so the design makes those failures visible (stated assumptions, hand-checked numbers) instead of hiding them behind a confident tone. I stopped there rather than game a passing score.</li>
+      <li>Open-sourced with a reusable evaluation set, so any future change can be re-tested the same way.</li>
+    </ul>
+
+    <p style="margin-top:8px"><a href="https://github.com/victor-alpha-95/fable-method" target="_blank" rel="noopener">View the protocol &amp; full write-up on GitHub &rarr;</a></p>
+  </article>
+</main>
+<footer><div class="wrap">&copy; <span id="yr"></span> Vatsalya Awasthi</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dfe5570fc54a404fb84491069a4b81f4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
