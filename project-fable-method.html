@@ -41,6 +41,7 @@
       <li>Built a persistent, append-only memory so lessons compound: a global journal plus a per-project file the agent reads before it starts and writes after it finishes.</li>
       <li>Made verification non-negotiable. No success claim ships without quoted evidence from the environment, and anything that can&rsquo;t be checked is labelled UNVERIFIED with the exact test to run.</li>
       <li>Wrote in guardrails against the failure modes that actually sink agents: confident false success, fixating on the first hypothesis, big-bang builds tested only at the end, answering a false premise, and memory bloat.</li>
+      <li>Added a token-economy layer that routes each step to the cheapest capable model &mdash; bulk reading and search go to fast, cheap models or plain scripts; judgment, synthesis, and verification stay on the strongest &mdash; so a long task costs less without lowering the quality bar.</li>
       <li>Tuned it empirically rather than by taste &mdash; 14 graded runs over 5 rounds, each change driven by a failure I watched happen.</li>
     </ul>
 
