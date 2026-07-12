@@ -40,9 +40,13 @@
       <li>Designed a single loop &mdash; recall past lessons, do the work with discipline, verify against evidence, record what was learned &mdash; running underneath four modes: fixing what&rsquo;s broken, building what&rsquo;s new, answering how-to questions, and answering factual ones.</li>
       <li>Built a persistent, append-only memory so lessons compound: a global journal plus a per-project file the agent reads before it starts and writes after it finishes.</li>
       <li>Made verification non-negotiable. No success claim ships without quoted evidence from the environment, and anything that can&rsquo;t be checked is labelled UNVERIFIED with the exact test to run.</li>
-      <li>Wrote in guardrails against the failure modes that actually sink agents: confident false success, fixating on the first hypothesis, big-bang builds tested only at the end, answering a false premise, and memory bloat.</li>
-      <li>Added a token-economy layer that routes each step to the cheapest capable model &mdash; bulk reading and search go to fast, cheap models or plain scripts; judgment, synthesis, and verification stay on the strongest &mdash; so a long task costs less without lowering the quality bar.</li>
-      <li>Tuned it empirically rather than by taste &mdash; 14 graded runs over 5 rounds, each change driven by a failure I watched happen.</li>
+      <li>Added a failure drill. Anything whose job is to catch a problem &mdash; an alert, a backup, a retry &mdash; isn&rsquo;t finished until the failure has been made to happen and the alarm has been watched to fire. In testing, this was the one change that measurably improved correctness.</li>
+      <li>Extended the premise check to &ldquo;authoritative&rdquo; inputs. An invoice or a spec figure can itself be wrong, so when the data can&rsquo;t reproduce the official number, saying so <em>is</em> the answer &mdash; and the agent never invents an output to satisfy a form, a gate, or a deadline.</li>
+      <li>Rebuilt it as a thin core with the detail loaded on demand, so a trivial fix pays nothing for machinery it never uses. The ceremony now calibrates to the model as well as the stakes: a strong model starts a tier lighter and adds process only after it stumbles; a smaller one takes the full checklist up front.</li>
+      <li>Added a token-economy layer so the discipline pays for itself &mdash; plain code before any model, the reading measured before work is handed to sub-agents, the cheapest capable model on each leg, and judgment and final sign-off never delegated.</li>
+      <li>Made the memory earn its keep. A lesson is only written up if a fresh model couldn&rsquo;t cheaply work it out again from the files alone; and constraints that live outside the code &mdash; a verbal veto, a contractual interface &mdash; are recorded with the authority behind them, not just their content, because a later session reading only the code can&rsquo;t tell a mandate from a preference.</li>
+      <li>Wrote in guardrails against the rest of what actually sinks agents: fixating on the first hypothesis, big-bang builds tested only at the end, and memory that bloats until the signal is buried.</li>
+      <li>Tuned it empirically rather than by taste &mdash; graded runs, each change driven by a failure I watched happen, and each one kept only if it earned its place.</li>
     </ul>
 
     <figure class="diagram">
@@ -53,6 +57,7 @@
     <h2>Outcome</h2>
     <ul>
       <li>On a held-out benchmark, a small model went from 0 of 6 tasks to 5 of 6 with the protocol; a stronger model passed every case.</li>
+      <li>Learned which rules actually pay. The failure drill was the only change that measurably improved correctness, and writing up every lesson cost more than it saved &mdash; which is why the record step now has a gate in front of it. Both findings came from runs, not intuition, and one of them killed a rule I liked.</li>
       <li>Found the honest ceiling. The last failures were a model-capability limit, not a protocol gap, so the design makes those failures visible (stated assumptions, hand-checked numbers) instead of hiding them behind a confident tone. I stopped there rather than game a passing score.</li>
       <li>Open-sourced with a reusable evaluation set, so any future change can be re-tested the same way.</li>
     </ul>
