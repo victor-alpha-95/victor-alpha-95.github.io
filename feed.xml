@@ -6,7 +6,14 @@
     <atom:link href="https://victor-alpha-95.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>Notes on strategy, new business, and operating in an AI-native way.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Independence, Trust, Risk</title>
+      <link>https://victor-alpha-95.github.io/article-independence-trust-risk.html</link>
+      <guid>https://victor-alpha-95.github.io/article-independence-trust-risk.html</guid>
+      <pubDate>Tue, 16 Sep 2026 09:00:00 +0000</pubDate>
+      <description>Everyone asks if AI is good enough to do the job yet. That's the wrong question. Three filters for letting AI into real work: how much rope, how much proof, how much it can break.</description>
+    </item>
     <item>
       <title>Building With Everything</title>
       <link>https://victor-alpha-95.github.io/article-zero-to-one-inside-a-giant.html</link>
