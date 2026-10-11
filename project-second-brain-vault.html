@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Second Brain the AI Maintains — Vatsalya Awasthi</title>
+<meta name="description" content="A knowledge vault that files every AI session overnight and briefs the next one, built on Karpathy's LLM-Wiki pattern." />
+<link rel="canonical" href="https://victor-alpha-95.github.io/project-second-brain-vault.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A Second Brain the AI Maintains — Vatsalya Awasthi" />
+<meta property="og:description" content="A knowledge vault that files every AI session overnight and briefs the next one, built on Karpathy's LLM-Wiki pattern." />
+<meta property="og:url" content="https://victor-alpha-95.github.io/project-second-brain-vault.html" />
+<meta property="og:image" content="https://victor-alpha-95.github.io/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Second Brain the AI Maintains — Vatsalya Awasthi" />
+<meta name="twitter:description" content="A knowledge vault that files every AI session overnight and briefs the next one, built on Karpathy's LLM-Wiki pattern." />
+<meta name="twitter:image" content="https://victor-alpha-95.github.io/og.png" />
+<link rel="stylesheet" href="site.css" />
+<link rel="alternate" type="application/rss+xml" title="Vatsalya Awasthi — Writing" href="feed.xml" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232f54eb'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site"><div class="wrap nav">
+  <span class="brand"><a href="index.html">Vatsalya Awasthi</a></span>
+  <nav><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="index.html#writing">Writing</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <a class="back" href="projects.html" style="display:inline-block;margin:34px 0 18px">&larr; All projects</a>
+  <article class="post">
+    <h1>A Second Brain the AI Maintains</h1>
+    <p class="meta">October 2026 · AI-native, Knowledge management, Systems, Claude Code, Obsidian</p>
+    <p class="lede">A knowledge vault that files every AI session overnight and briefs the next one, built on Karpathy&rsquo;s LLM-Wiki pattern.</p>
+
+    <h2>Context</h2>
+    <p>Every AI session I ran started from zero. A decision made on Tuesday got re-argued on Thursday. Project status drifted between files. Three earlier attempts at a &ldquo;master workspace&rdquo; died because the upkeep landed on me. Karpathy&rsquo;s LLM-Wiki idea flips the roles: the model maintains a wiki, the human curates sources and asks questions. I wanted to know if that holds when the sources are my own working sessions.</p>
+
+    <h2>What I did</h2>
+    <ul>
+      <li>Built the vault on Obsidian and Claude Code with three layers: immutable sources, a wiki the model owns, and a schema file that keeps it disciplined. Then I had a separate agent review it cold. Its verdict: well structured, never written to. The nightly job had failed 95 mornings in a row. Nobody noticed.</li>
+      <li>Rebuilt from the loop that matters. Sessions enter as one-page digests, not transcripts. Documents that change enter as hash-tracked pointers, not copies. A generated 1,500-token brief is the only required reading for a new session.</li>
+      <li>Made every write a transaction. <code>begin</code> refuses a dirty tree, <code>end</code> checks and commits, <code>rollback</code> exists. The scheduler sits behind a wrapper that pauses itself after two failures and files a question for my Sunday review.</li>
+      <li>Drew the privacy line in code. A blocklist tells touching a project apart from mentioning it. Facts about people are stored as categories until I confirm them. There&rsquo;s a written way to erase. A second cold reviewer then attacked the rebuild and found 10 defects, 3 of them serious. All fixed before the first unattended run.</li>
+    </ul>
+
+    <figure class="diagram">
+      <img src="second-brain-loop.svg" alt="A loop of four steps: Session (you work, any surface), Digest (one page, overnight), Wiki (at most three cards updated, pointers not copies), Brief (the desk note, about 1,500 tokens). A dashed arrow returns from Brief to Session, labelled: the next session reads it first. Below, a rail labelled The human gate: anything needing a decision goes to a four-line queue read on Sundays (30 minutes a week); a job that fails twice pauses itself and files a note there (0 per day)." />
+      <figcaption>One loop, one gate. The librarian files; the editor decides.</figcaption>
+    </figure>
+
+    <h2>Outcome</h2>
+    <ul>
+      <li>A cold session orients for about 1,600 tokens. It answers &ldquo;where did I leave X, and why did I decide Y&rdquo; from the vault alone, in about 8,000 tokens as measured by the reviewer.</li>
+      <li>The first unattended run filed three sessions and told me something I didn&rsquo;t know. Three scheduled tasks in September had died silently on an expired token. One project&rsquo;s definition of done was never reached.</li>
+      <li>My cost: nothing daily, half an hour on Sundays, ten seconds a week for a sync. Keeping it now costs less than ignoring it. That&rsquo;s the only test these systems have ever failed with me.</li>
+    </ul>
+  </article>
+</main>
+<footer><div class="wrap">&copy; <span id="yr"></span> Vatsalya Awasthi</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dfe5570fc54a404fb84491069a4b81f4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
