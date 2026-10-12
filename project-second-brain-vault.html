@@ -35,6 +35,12 @@
     <h2>Context</h2>
     <p>Every AI session I ran started from zero. A decision made on Tuesday got re-argued on Thursday. Project status drifted between files. Three earlier attempts at a &ldquo;master workspace&rdquo; died because the upkeep landed on me. Karpathy&rsquo;s LLM-Wiki idea flips the roles: the model maintains a wiki, the human curates sources and asks questions. I wanted to know if that holds when the sources are my own working sessions.</p>
 
+    <figure class="diagram diagram--live">
+      <iframe src="fig-night-filer-light.html" title="The night filer: an interactive figure of the overnight filing run" loading="lazy" width="100%" height="640" style="border:0;display:block;background:transparent"></iframe>
+      <script>(function(){var f=document.currentScript.previousElementSibling;if(matchMedia('(prefers-color-scheme: dark)').matches)f.src='fig-night-filer.html';})();</script>
+      <figcaption>The night filer: one session card per trip from the intake tray to its drawer; every card filed prints the desk note a little further and turns the pending gauge down by one. Hover to move the carriage; &rarr; files a card.</figcaption>
+    </figure>
+
     <h2>What I did</h2>
     <ul>
       <li>Built the vault on Obsidian and Claude Code with three layers: immutable sources, a wiki the model owns, and a schema file that keeps it disciplined. Then I had a separate agent review it cold. Its verdict: well structured, never written to. The nightly job had failed 95 mornings in a row. Nobody noticed.</li>
@@ -54,6 +60,11 @@
       <li>The first unattended run filed three sessions and told me something I didn&rsquo;t know. Three scheduled tasks in September had died silently on an expired token. One project&rsquo;s definition of done was never reached.</li>
       <li>My cost: nothing daily, half an hour on Sundays, ten seconds a week for a sync. Keeping it now costs less than ignoring it. That&rsquo;s the only test these systems have ever failed with me.</li>
     </ul>
+
+    <figure class="diagram">
+      <img src="librarian-editor.svg" alt="Two cards side by side. The Editor (me, decides): decides what enters the building, asks the questions, one editorial meeting a week, publishes, purges, stops collecting. The Librarian (the AI, maintains): catalogues every arrival, updates the cards it touches, leaves the morning desk note, does the weekly stock-take and never decides what the library is for. Beneath them, three library objects flow left to right: acquisitions (sources/, the editor's call), the catalogue (wiki/, the librarian's work), the desk note (brief.md, read first every day)." />
+      <figcaption>Same library, two jobs. The AI never gets the editor&rsquo;s chair.</figcaption>
+    </figure>
   </article>
 </main>
 <footer><div class="wrap">&copy; <span id="yr"></span> Vatsalya Awasthi</div></footer>
