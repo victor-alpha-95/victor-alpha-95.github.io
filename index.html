@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vatsalya Awasthi — Strategy & New Business</title>
-<meta name="description" content="Vatsalya Awasthi — strategy and new-business operator working across pharma, mobility, and specialty chemicals. Corporate strategy, 0-to-1 businesses, B2B partnerships, and AI-native transformation." />
+<title>Vatsalya Awasthi — Notes and reflections</title>
+<meta name="description" content="Vatsalya Awasthi writes reflections on how people actually use AI, what sticks, what he's learning, and the systems he builds for his own life." />
 <link rel="canonical" href="https://victor-alpha-95.github.io/" />
 <link rel="alternate" type="application/rss+xml" title="Vatsalya Awasthi — Writing" href="feed.xml" />
 <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
@@ -12,13 +12,13 @@
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Vatsalya Awasthi — Strategy & New Business" />
-<meta property="og:description" content="Strategy and new-business operator across pharma, mobility, and specialty chemicals." />
+<meta property="og:title" content="Vatsalya Awasthi — Notes and reflections" />
+<meta property="og:description" content="Reflections on how people actually use AI, what sticks, and what I'm learning." />
 <meta property="og:url" content="https://victor-alpha-95.github.io/" />
 <meta property="og:image" content="https://victor-alpha-95.github.io/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Vatsalya Awasthi — Strategy & New Business" />
-<meta name="twitter:description" content="Strategy and new-business operator across pharma, mobility, and specialty chemicals." />
+<meta name="twitter:title" content="Vatsalya Awasthi — Notes and reflections" />
+<meta name="twitter:description" content="Reflections on how people actually use AI, what sticks, and what I'm learning." />
 <meta name="twitter:image" content="https://victor-alpha-95.github.io/og.png" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232f54eb'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
@@ -46,14 +46,14 @@
 <style>
   :root{
     --bg:#faf9f6; --surface:#ffffff; --ink:#15151a; --muted:#5c5c66;
-    --line:#e6e4dd; --accent:#2f54eb; --accent-soft:#2f54eb14;
+    --line:#e6e4dd; --accent:#2f54eb; --accent-soft:#2f54eb14; --on-accent:#ffffff;
     --maxw:720px; --radius:14px;
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,Helvetica,Arial,sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root{ --bg:#0e0e10; --surface:#16161a; --ink:#ededf0; --muted:#9a9aa6;
-      --line:#26262c; --accent:#7e98ff; --accent-soft:#7e98ff1f; }
+      --line:#26262c; --accent:#7e98ff; --accent-soft:#7e98ff1f; --on-accent:#0e0e10; }
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -62,7 +62,7 @@
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
-  .skip-link{position:absolute;left:-9999px;top:0;z-index:30;background:var(--accent);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;font-size:14px;font-weight:600}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:30;background:var(--accent);color:var(--on-accent);padding:10px 16px;border-radius:0 0 10px 0;font-size:14px;font-weight:600}
   .skip-link:focus{left:0}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
 
@@ -75,16 +75,17 @@
   .nav nav a:hover{color:var(--ink);text-decoration:none}
   @media(max-width:560px){.nav nav a{margin-left:14px;font-size:14px}}
 
-  /* Hero */
-  .hero{padding:74px 0 34px}
+  /* Intro */
+  .hero{padding:64px 0 30px}
   .eyebrow{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 14px}
-  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,52px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 18px}
-  .lede{font-size:clamp(18px,2.3vw,21px);color:var(--muted);max-width:62ch;margin:0 0 26px}
+  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,5.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0 0 18px}
+  .lede{font-size:clamp(18px,2.3vw,20px);color:var(--muted);max-width:60ch;margin:0 0 24px}
   .socials{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
   .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);
     background:var(--surface);color:var(--ink);padding:9px 14px;border-radius:999px;
     font-size:14.5px;font-weight:550;transition:border-color .15s,transform .15s}
   .chip:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+  .chip.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
   .chip svg{width:16px;height:16px;fill:currentColor}
 
   section{padding:40px 0;border-top:1px solid var(--line)}
@@ -92,24 +93,8 @@
   .sec-h h2{font-family:var(--serif);font-weight:600;font-size:25px;letter-spacing:-0.01em;margin:0}
   .sec-h a{font-size:14px;font-weight:550}
   p{margin:0 0 16px}
-  .about p:last-child{margin-bottom:0}
 
-  /* Experience timeline */
-  .xp{display:grid;gap:4px}
-  .role{display:grid;grid-template-columns:1fr auto;gap:6px 18px;padding:18px 0;border-bottom:1px solid var(--line)}
-  .role:last-child{border-bottom:0}
-  .role h3{margin:0;font-size:17.5px;font-weight:650;letter-spacing:-0.01em}
-  .role .org{color:var(--accent);font-weight:600}
-  .role .when{color:var(--muted);font-size:14px;white-space:nowrap;text-align:right}
-  .role .place{color:var(--muted);font-size:14px;text-align:right}
-  .role ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:15.5px;grid-column:1/-1}
-  .role ul li{margin:4px 0}
-  @media(max-width:560px){
-    .role{grid-template-columns:1fr}
-    .role .when,.role .place{text-align:left}
-  }
-
-  /* Cards (projects / writing) */
+  /* Cards (writing / projects) — markup identical to the live site, so publish.py build still owns the Writing cards */
   .cards{display:grid;gap:2px}
   .card{display:block;padding:18px 16px;border:1px solid transparent;border-radius:var(--radius);transition:background .15s,border-color .15s}
   .card:hover{background:var(--accent-soft);border-color:var(--line);text-decoration:none}
@@ -120,23 +105,27 @@
   .tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
   .tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
 
-  .empty{border:1px dashed var(--line);border-radius:var(--radius);padding:26px;text-align:center;color:var(--muted);font-size:15px}
+  /* The newest piece leads: the first generated card becomes the feature, no extra markup */
+  #writing .cards .card:first-child{border-color:var(--line);background:var(--surface);padding:24px 22px;margin-bottom:12px}
+  #writing .cards .card:first-child::before{content:"Latest";display:block;color:var(--accent);font-weight:600;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+  #writing .cards .card:first-child h3{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3.4vw,28px);line-height:1.2;letter-spacing:-0.015em}
+  #writing .cards .card:first-child p{font-size:16.5px;margin-top:10px}
+  #writing .cards .card:first-child:hover{background:var(--accent-soft)}
+
+  .about-short p{color:var(--muted);max-width:62ch}
+  .about-short p:last-child{margin-bottom:0}
+
+  /* Follow */
+  .follow-block{border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;background:var(--surface)}
+  .follow-block h3{margin:0 0 4px;font-size:18px;font-weight:650;letter-spacing:-0.01em}
+  .follow-block .note{margin:0 0 14px;color:var(--muted);font-size:14.5px}
+  .subscribe{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:16px}
+  .subscribe input[type=email]{flex:1;min-width:200px;padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:15px;font-family:inherit}
+  .subscribe input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+  .subscribe button{padding:11px 20px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .subscribe button:hover{border-color:var(--accent)}
 
   footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-  footer .socials{margin-bottom:14px}
-  .skills{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
-  .skills .tag{color:var(--muted)}
-
-  /* subscribe */
-  .subscribe-block{border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;background:var(--surface)}
-  .subscribe-block h3{margin:0 0 4px;font-size:18px;font-weight:650;letter-spacing:-0.01em}
-  .subscribe-block .sub-note{margin:0 0 14px;color:var(--muted);font-size:14.5px}
-  .subscribe{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .subscribe input[type=email]{flex:1;min-width:220px;padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:15px;font-family:inherit}
-  .subscribe input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
-  .subscribe button{padding:11px 20px;border:none;border-radius:999px;background:var(--accent);color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:opacity .15s}
-  .subscribe button:hover{opacity:.9}
-  .subscribe-alt{margin:12px 0 0;font-size:13.5px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -146,10 +135,9 @@
   <div class="wrap nav">
     <span class="brand">Vatsalya Awasthi</span>
     <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#writing">Writing</a>
+      <a href="#projects">Projects</a>
+      <a href="about.html">About</a>
     </nav>
   </div>
 </header>
@@ -157,127 +145,23 @@
 <main class="wrap" id="main">
 
   <section class="hero" style="border-top:0">
-    <p class="eyebrow">Strategy · New Business · Transformation</p>
-    <h1>I turn CEO-level priorities into businesses, partnerships, and outcomes.</h1>
-    <p class="lede">Strategy and new-business operator working across pharma, mobility, and specialty chemicals — from corporate strategy and 0-to-1 ventures to B2B partnerships, M&A, and AI-native transformation. Currently Senior Manager, Strategy &amp; Governance at Cipla.</p>
+    <p class="eyebrow">Notes &amp; reflections</p>
+    <h1>I write to find out what I actually think.</h1>
+    <p class="lede">Reflections on how people really use AI and what sticks, on what I&rsquo;m learning, and on the systems I build for my own life. Written for friends and peers, to read and reflect on.</p>
     <div class="socials">
+      <a class="chip primary" href="https://whatsapp.com/channel/0029VbCnRbx1CYoJPhrKMw0r" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2.02c-5.49 0-9.95 4.46-9.95 9.95 0 1.75.46 3.46 1.33 4.97L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.24h.01c5.49 0 9.95-4.46 9.95-9.95s-4.46-9.95-9.96-9.95zm0 1.8c4.5 0 8.15 3.66 8.15 8.15s-3.65 8.15-8.15 8.15h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.08.81.82-3-.19-.31a8.1 8.1 0 0 1-1.25-4.34c0-4.49 3.66-8.15 8.15-8.15zm-2.43 4.32c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.9 2.9 4.6 3.96 2.25.88 2.71.71 3.2.66.49-.04 1.58-.64 1.8-1.27.22-.62.22-1.16.16-1.27-.07-.11-.25-.18-.52-.31-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.86-.86 1.04-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.16-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.48-.07-.13-.61-1.47-.84-2.01-.22-.52-.44-.45-.61-.46h-.52z"/></svg>
+        Get new pieces on WhatsApp
+      </a>
       <a class="chip" href="https://www.linkedin.com/in/vatsalya-awasthi/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.02 5 2.5 2.5 0 01-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.32-1.96 2.7V21H9z"/></svg>
         LinkedIn
       </a>
       <a class="chip" href="https://x.com/_victor_alpha_" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        X / Twitter
+        X
       </a>
-      <a class="chip" href="mailto:vatsalya.mdig@gmail.com">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20v16H2zm2 2v.4l8 5 8-5V6H4zm16 2.7l-8 5-8-5V18h16z"/></svg>
-        Email
-      </a>
-      <a class="chip" href="https://whatsapp.com/channel/0029VbCnRbx1CYoJPhrKMw0r" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2.02c-5.49 0-9.95 4.46-9.95 9.95 0 1.75.46 3.46 1.33 4.97L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.24h.01c5.49 0 9.95-4.46 9.95-9.95s-4.46-9.95-9.96-9.95zm0 1.8c4.5 0 8.15 3.66 8.15 8.15s-3.65 8.15-8.15 8.15h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.08.81.82-3-.19-.31a8.1 8.1 0 0 1-1.25-4.34c0-4.49 3.66-8.15 8.15-8.15zm-2.43 4.32c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.9 2.9 4.6 3.96 2.25.88 2.71.71 3.2.66.49-.04 1.58-.64 1.8-1.27.22-.62.22-1.16.16-1.27-.07-.11-.25-.18-.52-.31-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.86-.86 1.04-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.16-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.48-.07-.13-.61-1.47-.84-2.01-.22-.52-.44-.45-.61-.46h-.52z"/></svg>
-        WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="sec-h"><h2>About</h2></div>
-    <p>I&rsquo;m a strategy and new-business professional who likes the messy beginning of things — validating a market, finding the first partner, and building the operating discipline to scale what works. Over the last several years I&rsquo;ve worked at the intersection of corporate strategy and execution: translating leadership priorities into targets, then program-managing the path to results.</p>
-    <p>At Cipla, I help steer strategic planning and performance management for a large prescription-pharma business — turning granular market data into growth decisions and bringing AI into how the organization sees and acts. Before that, on a group leadership program, I built new businesses from zero to one, led market-entry and corporate-development strategy, and closed B2B partnerships across industrial sectors.</p>
-    <p>I&rsquo;m an engineer by training (Shiv Nadar University) and an MBA by trade (MDI Gurgaon), and increasingly an AI-native operator — using tools like this site itself, which is built and maintained through an automated publishing system. I care about clarity, leverage, and shipping.</p>
-  </section>
-
-  <section id="experience">
-    <div class="sec-h"><h2>Experience</h2></div>
-    <div class="xp">
-
-      <article class="role">
-        <div>
-          <h3>Senior Manager — Strategy &amp; Governance</h3>
-          <span class="org">Cipla Limited</span>
-        </div>
-        <div>
-          <div class="when">Jun 2025 — Present</div>
-          <div class="place">Mumbai, India</div>
-        </div>
-        <ul>
-          <li>Drive strategic planning and enterprise performance management across a large prescription-pharma business, translating leadership priorities into clear targets and accountable delivery.</li>
-          <li>Diagnose market shifts and shape go-to-market pivots that grow share in fast-moving therapy areas.</li>
-          <li>Turn granular field data into territory-level growth decisions, and piloted an AI analytics capability to speed up insight and reporting.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <div>
-          <h3>Senior Manager — New Business &amp; Transformation</h3>
-          <span class="org">Gulf Oil India</span> &middot; <span style="color:var(--muted);font-size:14px">Hinduja Leadership Program</span>
-        </div>
-        <div>
-          <div class="when">Jun 2022 — May 2025</div>
-          <div class="place">Mumbai, India</div>
-        </div>
-        <ul>
-          <li>Built a new deep-tech business from zero to one — validating the market and running product-development and OEM-approval programs with global partners.</li>
-          <li>Crafted a market-entry strategy for a new industrial product line, from the investment case through to a B2B route-to-market.</li>
-          <li>Shaped an inorganic-growth thesis in specialty chemicals, screening and recommending acquisition targets.</li>
-          <li>Drove material cost savings and real-time visibility through a supply-chain digital transformation; closed strategic B2B partnerships across industrial sectors.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <div>
-          <h3>Business Development Manager</h3>
-          <span class="org">Progressive Enterprises</span>
-        </div>
-        <div>
-          <div class="when">Sep 2018 — Jun 2020</div>
-          <div class="place">Ahmedabad, India</div>
-        </div>
-        <ul>
-          <li>Built a new product category from scratch and onboarded key accounts, adding meaningful annual revenue.</li>
-          <li>Conceptualised and scaled a new vertical to revenue within its first year.</li>
-        </ul>
-      </article>
-
-    </div>
-    <p style="margin-top:18px;font-size:14.5px;color:var(--muted)">
-      MBA, Marketing &amp; Finance — MDI Gurgaon &middot; B.Tech, Electrical &amp; Electronics — Shiv Nadar University
-    </p>
-    <p style="margin-top:6px;font-size:14.5px;color:var(--muted)">
-      <strong style="color:var(--ink);font-weight:600">Recognition:</strong> Cipla Certificate of Recognition (FY 2025&ndash;26) &middot; Gulf Oil Special Recognition Award, by MD &amp; CEO (FY 2023&ndash;24) &middot; CAT 99.4 &amp; XAT 99.3 percentile &middot; Founder, AURA (education non-profit)
-    </p>
-  </section>
-
-  <section id="projects">
-    <div class="sec-h">
-      <h2>Projects</h2>
-      <a href="projects.html">All projects &rarr;</a>
-    </div>
-    <div class="cards">
-      <a class="card" href="project-second-brain-vault.html">
-        <div class="top">
-          <h3>A second brain the AI maintains</h3>
-          <span class="date">Oct 2026</span>
-        </div>
-        <p>A knowledge vault that files every AI session overnight and briefs the next one, built on Karpathy&rsquo;s LLM-Wiki pattern.</p>
-        <div class="tags"><span class="tag">AI-native</span><span class="tag">Knowledge management</span><span class="tag">Systems</span><span class="tag">Claude Code</span><span class="tag">Obsidian</span></div>
-      </a>
-      <a class="card" href="project-fable-method.html">
-        <div class="top">
-          <h3>The Fable Method</h3>
-          <span class="date">Jul 2026</span>
-        </div>
-        <p>A portable working protocol that gives an AI agent a memory and a verification habit, so it improves across sessions instead of starting over.</p>
-        <div class="tags"><span class="tag">AI-native</span><span class="tag">Agents</span><span class="tag">Systems</span><span class="tag">Open source</span></div>
-      </a>
-      <a class="card" href="project-personal-website.html">
-        <div class="top">
-          <h3>Personal website + self-publishing system</h3>
-          <span class="date">Jun 2026</span>
-        </div>
-        <p>A minimalist site that runs itself: publishing, monitoring, and drafting writing, with a human approval gate at every step.</p>
-        <div class="tags"><span class="tag">AI-native</span><span class="tag">Web</span><span class="tag">Automation</span><span class="tag">Systems</span></div>
-      </a>
+      <a class="chip" href="feed.xml">RSS</a>
     </div>
   </section>
 
@@ -322,21 +206,65 @@
     </div>
   </section>
 
-  <section id="subscribe">
-    <div class="sec-h"><h2>Stay in touch</h2></div>
-    <div class="subscribe-block">
-      <h3>Get new pieces by email</h3>
-      <p class="sub-note">Occasional notes on strategy, new business, and operating in an AI-native way. No spam &mdash; opt out anytime by replying to any email.</p>
+  <section id="projects">
+    <div class="sec-h">
+      <h2>Things I&rsquo;ve built</h2>
+      <a href="projects.html">All projects &rarr;</a>
+    </div>
+    <div class="cards">
+      <a class="card" href="project-second-brain-vault.html">
+        <div class="top">
+          <h3>A second brain the AI maintains</h3>
+          <span class="date">Oct 2026</span>
+        </div>
+        <p>A knowledge vault that files every AI session overnight and briefs the next one, built on Karpathy&rsquo;s LLM-Wiki pattern.</p>
+        <div class="tags"><span class="tag">AI-native</span><span class="tag">Knowledge management</span><span class="tag">Systems</span><span class="tag">Claude Code</span><span class="tag">Obsidian</span></div>
+      </a>
+      <a class="card" href="project-fable-method.html">
+        <div class="top">
+          <h3>The Fable Method</h3>
+          <span class="date">Jul 2026</span>
+        </div>
+        <p>A portable working protocol that gives an AI agent a memory and a verification habit, so it improves across sessions instead of starting over.</p>
+        <div class="tags"><span class="tag">AI-native</span><span class="tag">Agents</span><span class="tag">Systems</span><span class="tag">Open source</span></div>
+      </a>
+      <a class="card" href="project-personal-website.html">
+        <div class="top">
+          <h3>Personal website + self-publishing system</h3>
+          <span class="date">Jun 2026</span>
+        </div>
+        <p>A minimalist site that runs itself: publishing, monitoring, and drafting writing, with a human approval gate at every step.</p>
+        <div class="tags"><span class="tag">AI-native</span><span class="tag">Web</span><span class="tag">Automation</span><span class="tag">Systems</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="about-short">
+    <div class="sec-h">
+      <h2>About</h2>
+      <a href="about.html">Full background &rarr;</a>
+    </div>
+    <p>I&rsquo;m an engineer by training (Shiv Nadar University) and an MBA by trade (MDI Gurgaon). By day I work in corporate strategy. Here I write as myself, about whatever I can&rsquo;t stop thinking about.</p>
+    <p>I also founded AURA, an education non-profit, and I build most of my own tools, including the one that runs this site.</p>
+  </section>
+
+  <section id="follow">
+    <div class="follow-block">
+      <h3>Read the next one</h3>
+      <p class="note">One piece at most each week, often fewer. The WhatsApp channel pings you when something new is up. Reply to anything; I read it all.</p>
+      <div class="socials">
+        <a class="chip primary" href="https://whatsapp.com/channel/0029VbCnRbx1CYoJPhrKMw0r" target="_blank" rel="noopener">Follow on WhatsApp</a>
+        <a class="chip" href="feed.xml">RSS</a>
+      </div>
       <form class="subscribe" action="https://formsubmit.co/vatsalya.mdig@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New website subscriber" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_next" value="https://victor-alpha-95.github.io/thanks.html" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-        <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required />
+        <input type="email" name="email" placeholder="Or by email: you@email.com" aria-label="Email address" required />
         <button type="submit">Subscribe</button>
       </form>
-      <p class="subscribe-alt">Prefer WhatsApp? <a href="https://whatsapp.com/channel/0029VbCnRbx1CYoJPhrKMw0r" target="_blank" rel="noopener">Follow the channel &rarr;</a></p>
     </div>
   </section>
 
@@ -344,16 +272,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="socials">
-      <a class="chip" href="https://www.linkedin.com/in/vatsalya-awasthi/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="chip" href="https://x.com/_victor_alpha_" target="_blank" rel="noopener">X</a>
-      <a class="chip" href="mailto:vatsalya.mdig@gmail.com">Email</a>
-      <a class="chip" href="https://whatsapp.com/channel/0029VbCnRbx1CYoJPhrKMw0r" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    <div class="skills">
-      <span class="tag">Corporate strategy</span><span class="tag">New business 0&rarr;1</span><span class="tag">B2B partnerships</span><span class="tag">M&amp;A</span><span class="tag">Digital &amp; AI transformation</span><span class="tag">Market research</span><span class="tag">Financial modelling</span>
-    </div>
-    <p style="margin-top:16px">&copy; <span id="yr"></span> Vatsalya Awasthi · Built &amp; maintained with an AI publishing workflow.</p>
+    <p>&copy; <span id="yr"></span> Vatsalya Awasthi · <a href="mailto:vatsalya.mdig@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/vatsalya-awasthi/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://x.com/_victor_alpha_" target="_blank" rel="noopener">X</a> · Built and run with an AI publishing workflow I wrote.</p>
   </div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
