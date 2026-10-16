@@ -53,6 +53,18 @@
   .skills{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
   .tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
   footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .honors{list-style:none;margin:0;padding:0}
+  .honors li{padding:14px 0;border-bottom:1px solid var(--line)}
+  .honors li:last-child{border-bottom:0}
+  .honors .what{font-weight:650;letter-spacing:-0.01em}
+  .honors .who{color:var(--muted);font-size:14px}
+  .honors .why{color:var(--muted);font-size:15.5px;margin-top:4px}
+  .recs{display:grid;gap:14px}
+  .rec{margin:0;padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+  .rec p{margin:0 0 10px;font-family:var(--serif);font-size:18px;line-height:1.45}
+  .rec footer{padding:0;border:0;font-size:14px;color:var(--muted)}
+  .rec footer strong{color:var(--ink);font-weight:600}
+  .more{margin-top:14px;font-size:14.5px}
 </style>
 </head>
 <body>
@@ -81,7 +93,7 @@
     <div class="sec-h"><h2>Experience</h2></div>
     <div class="xp">
       <article class="role">
-        <div><h3>Senior Manager — Strategy &amp; Governance</h3><span class="org">Cipla Limited</span></div>
+        <div><h3>Budget Planning and Governance Manager</h3><span class="org">Cipla Limited</span></div>
         <div><div class="when">Jun 2025 — Present</div><div class="place">Mumbai, India</div></div>
         <ul>
           <li>Drive strategic planning and enterprise performance management across a large prescription-pharma business, translating leadership priorities into clear targets and accountable delivery.</li>
@@ -109,11 +121,35 @@
       </article>
     </div>
     <p style="margin-top:18px;font-size:14.5px;color:var(--muted)">MBA, Marketing &amp; Finance — MDI Gurgaon &middot; B.Tech, Electrical &amp; Electronics — Shiv Nadar University</p>
-    <p style="margin-top:6px;font-size:14.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:600">Recognition:</strong> Cipla Certificate of Recognition (FY 2025&ndash;26) &middot; Gulf Oil Special Recognition Award, by MD &amp; CEO (FY 2023&ndash;24) &middot; CAT 99.4 &amp; XAT 99.3 percentile &middot; Founder, AURA (education non-profit)</p>
     <div class="skills">
       <span class="tag">Corporate strategy</span><span class="tag">New business 0&rarr;1</span><span class="tag">B2B partnerships</span><span class="tag">M&amp;A</span><span class="tag">Digital &amp; AI transformation</span><span class="tag">Market research</span><span class="tag">Financial modelling</span>
     </div>
   </section>
+
+  <section id="recognition">
+    <div class="sec-h"><h2>Honors &amp; recognition</h2></div>
+    <ul class="honors">
+      <li><div class="what">Certificate of Appreciation: Execution Excellence in Business Planning</div><div class="who">Cipla &middot; Sep 2026</div></li>
+      <li><div class="what">Certificate of Recognition, FY 2025&ndash;26</div><div class="who">Cipla &middot; Mar 2026</div><div class="why">For outstanding contribution and excellence in performance during the financial year.</div></li>
+      <li><div class="what">Special Recognition Award, FY 2023&ndash;24</div><div class="who">Awarded by the MD &amp; CEO, Gulf Oil Lubricants India &middot; Jul 2024</div><div class="why">For developing and managing a significant B2B supply relationship, and for piloting a digital solution that optimised secondary logistics cost.</div></li>
+      <li><div class="what">Sales Leadership Program, Kraftshala</div><div class="who">Apr 2021</div><div class="why">Selected from 300 students across India.</div></li>
+      <li><div class="what">CAT 99.4 and XAT 99.3 percentile</div></li>
+      <li><div class="what">At Shiv Nadar University</div><div class="why">Co-founder and Secretary of AURA, an education non-profit (2016&ndash;18) &middot; Co-founder and Advisor, The Birding Society of SNU &middot; Head of Operations, BREEZE 2016 &middot; Student Coordinator, Project VISAKA, Ministry of Human Resource Development, Government of India.</div></li>
+    </ul>
+  </section>
+
+  <section id="recommendations">
+    <div class="sec-h"><h2>What people I&rsquo;ve worked with say</h2></div>
+    <div class="recs">
+      <blockquote class="rec"><p>&ldquo;A great manager with his heart in the right place.&rdquo;</p><footer><strong>Rohit Prasad</strong>, Professor, Management Development Institute &middot; supervised my social-welfare project for the Gurgaon Street Vendors&rsquo; Association</footer></blockquote>
+      <blockquote class="rec"><p>&ldquo;Can break down a complex problem into simple steps and deliver multiple solutions.&rdquo;</p><footer><strong>Ralph Drago</strong>, Business &amp; Strategy Leader &middot; managed me directly at Gulf Oil</footer></blockquote>
+      <blockquote class="rec"><p>&ldquo;Exceptional problem-solving skills, strategic thinking, and a commitment to excellence.&rdquo;</p><footer><strong>Manas Mehra</strong>, Chief Information Officer &middot; worked with me on the Hinduja Leadership Program and Gulf Oil&rsquo;s supply-chain transformation</footer></blockquote>
+      <blockquote class="rec"><p>&ldquo;A person of great integrity and kindness.&rdquo;</p><footer><strong>Vivek Tomar</strong>, Vice President, B2B Distribution &amp; OEM Business &middot; senior colleague on a business-development project</footer></blockquote>
+      <blockquote class="rec"><p>&ldquo;His strategic foresight and proactive approach to business.&rdquo;</p><footer><strong>Hemankur Upadhyaya</strong>, Director &amp; Group Head, Finance &amp; Strategy &middot; worked with me as a client</footer></blockquote>
+    </div>
+    <p class="more"><a href="https://www.linkedin.com/in/vatsalya-awasthi/details/recommendations/" target="_blank" rel="noopener">Read the full recommendations on LinkedIn &rarr;</a></p>
+  </section>
+
 </main>
 
 <footer>
